@@ -88,8 +88,8 @@ const register = async (req, res) => {
     });
   }
 };
-
 /**
+
  * @desc    Iniciar sesión de usuario
  * @route   POST /api/v1/auth/login
  * @access  Public

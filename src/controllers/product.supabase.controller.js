@@ -100,9 +100,8 @@ const searchProductByCode = async (req, res) => {
       error: error.message
     });
   }
-};
+};/**
 
-/**
  * @desc    Obtener un producto por ID
  * @route   GET /api/v1/products/:id
  * @access  Private
@@ -207,7 +206,7 @@ const createProduct = async (req, res) => {
         .from('stock_movements')
         .insert([{
           product_id: product.id,
-          user_id: req.user?.id || 1, // Usar ID del usuario autenticado
+          user_id: req.user?.id || 1,
           type: 'entrada',
           quantity: parseInt(stock),
           reason: 'Stock inicial',

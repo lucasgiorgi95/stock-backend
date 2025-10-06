@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const { validarJWT } = require('./middlewares/validar-jwt');
+// Removed unused middleware import
 
 const app = express();
 
@@ -27,9 +27,6 @@ app.get('/', (req, res) => {
 app.use('/api/v1/auth', require('./routes/auth.routes'));
 
 // Rutas de la API (protegidas) - cada ruta maneja su propia autenticación
-app.use('/api/v1/marcas', require('./routes/marca.routes'));
-app.use('/api/v1/suppliers', require('./routes/supplier.routes'));
-app.use('/api/v1/movements', require('./routes/movement.routes'));
 app.use('/api/v1/stock', require('./routes/stock.routes'));
 app.use('/api/v1/products', require('./routes/product.routes'));
 

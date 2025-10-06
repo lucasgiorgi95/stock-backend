@@ -11,7 +11,7 @@ const {
   updateProduct,
   deleteProduct,
   getLowStockProducts
-} = require('../controllers/product.controller');
+} = require('../controllers/product.supabase.controller');
 
 // Aplicar middleware de autenticación a todas las rutas
 router.use(validarJWT);

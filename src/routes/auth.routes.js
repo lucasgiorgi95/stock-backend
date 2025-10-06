@@ -3,7 +3,7 @@ const router = express.Router();
 const { check } = require('express-validator');
 const { validarCampos } = require('../middlewares/validar-campos');
 const { validarJWT } = require('../middlewares/validar-jwt.supabase');
-const { register, login, getMe } = require('../controllers/auth.controller');
+const { register, login, getMe } = require('../controllers/auth.supabase.controller');
 
 /**
  * @route   POST /api/v1/auth/register
